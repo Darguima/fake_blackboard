@@ -6,18 +6,18 @@ interface InputsProps {
   setImage: React.Dispatch<React.SetStateAction<string>>
 }
 
-const Inputs:React.FC<InputsProps> = ({setName, setImage}) => {
+const Inputs: React.FC<InputsProps> = ({ setName }) => {
   const [newName, setNewName] = useState("")
 
-  return(
+  return (
     <View style={styles.container}>
       <View style={styles.subContainer}>
-      <Text>Name:</Text>
-      <TextInput onChangeText={setNewName} value={newName} style={styles.nameInput}/>
+        <Text>Name:</Text>
+        <TextInput onChangeText={setNewName} value={newName} style={styles.nameInput} />
       </View>
 
       <TouchableOpacity onPress={() => setName(newName)} style={styles.button}>
-        <Text>Clica em mim para Continuar</Text>        
+        <Text>Clica em mim para Continuar</Text>
       </TouchableOpacity>
     </View>
   )
