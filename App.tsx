@@ -1,13 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet } from 'react-native';
+
+import Inputs from "./pages/Inputs"
+import Main from "./pages/Main"
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const [name, setName] = useState("")
+  const [image, setImage] = useState("")
+
+  return name == "" ?
+  <Inputs setName={setName} setImage={setImage} />
+  :
+  <Main name={name} image={image} />
 }
 
 const styles = StyleSheet.create({
