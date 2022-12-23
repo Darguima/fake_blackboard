@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LoginPage from "../pages/LoginPage"
-import ProfilePage from "../pages/ProfilePage"
+import AppTabNavigator from './AppTabNavigator';
 
 import useUserInfo from '../contexts/userInfo';
 
@@ -14,7 +14,7 @@ const Routes:React.FC = () => {
           name == "" || studentNumber == "" || schoolDomain == "" ?
           <LoginPage/>
           :
-          <ProfilePage/>
+          <AppTabNavigator/>
         }
       </>
   )

@@ -1,17 +1,14 @@
 import React from "react"
-import { View, StyleSheet, Image, Text, useWindowDimensions } from 'react-native';
+import { View, StyleSheet, Image, Text } from 'react-native';
 
-import BBButton from "../components/BBButton";
+import BBButton from "../../components/BBButton";
 
-import useUserInfo from "../contexts/userInfo";
+import useUserInfo from "../../contexts/userInfo";
 
 const imageSize = 132
 
 const ProfilePage:React.FC = () => {
   const {name, studentNumber, schoolDomain} = useUserInfo()
-
-  const {height, width} = useWindowDimensions();
-  const styles = generateStyles(width, height)
 
   return(
     <View style={styles.container}>
@@ -20,10 +17,9 @@ const ProfilePage:React.FC = () => {
         
         <View style={styles.pinkView}>
           <View style={styles.crossIconContainer}>
-            <Image source={require("../assets/cross.jpg")} style={styles.crossIcon} />
+            <Image source={require("../../assets/icons/cross.jpg")} style={styles.crossIcon} />
           </View>
         </View>
-
 
         <View style={styles.whiteView}>
           <View style={styles.imageContainer}>
@@ -39,19 +35,18 @@ const ProfilePage:React.FC = () => {
         </View>
       </View>
 
-      <Image source={require("../assets/bottomMenu.jpg")} style={styles.bottomImageMenu} resizeMode={"stretch"}/>
+      <Image source={require("../../assets/bottomMenu.jpg")} style={styles.bottomImageMenu} resizeMode={"stretch"}/>
     </View>
   )
 }
 
-const generateStyles = (width: number, height: number) => 
-StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1
   },
 
   topContainer: {
-    height: "65%",
+    height: "70%",
   },
 
   pinkView: {
@@ -79,14 +74,17 @@ StyleSheet.create({
   },
 
   whiteView: {
-    height: "45%",
     alignItems: "center",
-    justifyContent: "flex-end",
+    justifyContent: "center",
+    
+    height: "45%",
 
     backgroundColor: "#fff",
 
     borderBottomColor: "#dddddd",
-    borderBottomWidth: 3,    
+    borderBottomWidth: 3,  
+    
+    paddingTop: imageSize / 2
   },
 
   imageContainer: {
@@ -121,8 +119,6 @@ StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
 
-    marginBottom: 30,
-
     width: "100%",
   },
 
@@ -141,8 +137,8 @@ StyleSheet.create({
   },
 
   bottomImageMenu: {
-    width: width,
-    height: height * 0.35,
+    flex: 1,
+    width: "100%",
   }
 })
 
