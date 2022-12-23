@@ -1,7 +1,7 @@
 import React from "react"
 import { View, StyleSheet, Image, Text, useWindowDimensions } from 'react-native';
 
-import BBButton from "../Components/BBButton";
+import BBButton from "../components/BBButton";
 
 interface ProfilePageProps {
   name: string

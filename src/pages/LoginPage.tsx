@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { View, StyleSheet } from 'react-native';
 
-import Header from "../Components/Header";
-import BBTextInput from "../Components/BBTextInput";
-import BBButton from "../Components/BBButton";
+import Header from "../components/Header";
+import BBTextInput from "../components/BBTextInput";
+import BBButton from "../components/BBButton";
 
 interface LoginPageProps {
   setName: React.Dispatch<React.SetStateAction<string>>
