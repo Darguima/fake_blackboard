@@ -5,13 +5,11 @@ import Header from "../components/Header";
 import BBTextInput from "../components/BBTextInput";
 import BBButton from "../components/BBButton";
 
-interface LoginPageProps {
-  setName: React.Dispatch<React.SetStateAction<string>>
-  setStudentNumber: React.Dispatch<React.SetStateAction<string>>
-  setSchoolDomain: React.Dispatch<React.SetStateAction<string>>
-}
+import useUserInfo from "../contexts/userInfo";
 
-const LoginPage:React.FC<LoginPageProps> = ({setName, setStudentNumber, setSchoolDomain}) => {
+const LoginPage:React.FC = () => {
+  const {setName, setStudentNumber, setSchoolDomain} = useUserInfo()
+
   const [inputName, setInputName] = useState("")
   const [inputStudentNumber, setInputStudentNumber] = useState("")
   const [inputDomain, setInputDomain] = useState("alunos.uminho.pt")

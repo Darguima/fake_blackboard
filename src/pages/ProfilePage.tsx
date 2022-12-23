@@ -3,15 +3,13 @@ import { View, StyleSheet, Image, Text, useWindowDimensions } from 'react-native
 
 import BBButton from "../components/BBButton";
 
-interface ProfilePageProps {
-  name: string
-  studentNumber: string
-  schoolDomain: string
-}
+import useUserInfo from "../contexts/userInfo";
 
 const imageSize = 132
 
-const ProfilePage:React.FC<ProfilePageProps> = ({name, studentNumber, schoolDomain}) => {
+const ProfilePage:React.FC = () => {
+  const {name, studentNumber, schoolDomain} = useUserInfo()
+
   const {height, width} = useWindowDimensions();
   const styles = generateStyles(width, height)
 
