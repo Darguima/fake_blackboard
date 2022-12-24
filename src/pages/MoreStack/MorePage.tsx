@@ -7,7 +7,7 @@ import useUserInfo from "../../contexts/userInfo";
 
 const imageSize = 132
 
-const ProfilePage:React.FC = () => {
+const MorePage:React.FC = () => {
   const {name, studentNumber, schoolDomain} = useUserInfo()
 
   return(
@@ -142,4 +142,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ProfilePage
+export default MorePage

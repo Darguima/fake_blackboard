@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import LandingStack from '../pages/LandingStack';
 import CoursesStack from '../pages/CoursesStack';
 import CalendarStack from '../pages/CalendarStack';
-import ProfileStack from '../pages/ProfileStack';
+import MoreStack from '../pages/MoreStack';
 
 const tabIcons = {
   landing: {
@@ -25,13 +25,13 @@ const tabIcons = {
     inactive: require("../assets/icons/calendarInactive.jpg")
   },
 
-  profile: {
-    active: require("../assets/icons/profileActive.jpg"),
-    inactive: require("../assets/icons/profileInactive.jpg")
+  more: {
+    active: require("../assets/icons/moreActive.jpg"),
+    inactive: require("../assets/icons/moreInactive.jpg")
   },
 }
 
-const imagePicker = (name: "landing" | "courses" | "calendar" | "profile", focused: boolean) => {
+const imagePicker = (name: "landing" | "courses" | "calendar" | "more", focused: boolean) => {
   const status = focused ? "active" : "inactive"
   return <Image style={styles.tab} source={tabIcons[name][status]} />
 }
@@ -79,12 +79,12 @@ const AppTabNavigator:React.FC = () => {
         />
 
         <Tab.Screen
-          name="ProfileTab"
-          component={ProfileStack}
+          name="MoreTab"
+          component={MoreStack}
           options={{
             title: "Mais",
             tabBarLabel: "",
-            tabBarIcon: ({ focused }) => imagePicker("profile", focused),
+            tabBarIcon: ({ focused }) => imagePicker("more", focused),
           }}
         />
 

@@ -2,9 +2,9 @@ import React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import ProfilePage from "./ProfilePage"
+import MorePage from "./MorePage"
 
-const ProfileStack:React.FC = () => {
+const MoreStack:React.FC = () => {
   const Stack = createNativeStackNavigator();
 
   return (
@@ -13,9 +13,9 @@ const ProfileStack:React.FC = () => {
         headerShown: false
       }}
     >
-      <Stack.Screen name="ProfilePage" component={ProfilePage} />
+      <Stack.Screen name="MorePage" component={MorePage} />
     </Stack.Navigator>
   )
 }
 
-export default ProfileStack
+export default MoreStack
