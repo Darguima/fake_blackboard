@@ -4,6 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import CoursesPage from "./CoursesPage"
 
+export type CoursesStackParamList = {
+	CoursesPage: undefined,
+}
+
 const CoursesStack:React.FC = () => {
   const Stack = createNativeStackNavigator();
 

@@ -4,6 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import CalendarPage from "./CalendarPage"
 
+export type CalendarStackParamList = {
+	CalendarPage: undefined,
+}
+
 const CalendarStack:React.FC = () => {
   const Stack = createNativeStackNavigator();
 
@@ -17,5 +21,6 @@ const CalendarStack:React.FC = () => {
     </Stack.Navigator>
   )
 }
+
 
 export default CalendarStack

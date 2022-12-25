@@ -4,8 +4,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import LandingPage from "./LandingPage"
 
+export type LandingStackParamList = {
+	LandingPage: undefined,
+}
+
 const LandingStack:React.FC = () => {
-  const Stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator<LandingStackParamList>();
 
   return (
     <Stack.Navigator
@@ -17,5 +21,6 @@ const LandingStack:React.FC = () => {
     </Stack.Navigator>
   )
 }
+
 
 export default LandingStack

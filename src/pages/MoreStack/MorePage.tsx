@@ -1,5 +1,6 @@
 import React from "react"
 import { View, StyleSheet, Image, Text } from 'react-native';
+import { useNavigationMoreStack } from "../../routes/useNavigation";
 
 import BBButton from "../../components/BBButton";
 
@@ -9,6 +10,8 @@ const imageSize = 132
 
 const MorePage:React.FC = () => {
   const {name, studentNumber, schoolDomain} = useUserInfo()
+
+  const { navigate } = useNavigationMoreStack()
 
   return(
     <View style={styles.container}>
@@ -29,7 +32,7 @@ const MorePage:React.FC = () => {
           <View style={styles.userInfoContainer}>
             <Text style={styles.nameText}>{name}</Text>
             <Text style={styles.emailText}>{studentNumber}@{schoolDomain}</Text>
-            <BBButton text="View Profile" darkMode={true}/>
+            <BBButton text="View Profile" darkMode={true} onPress={() => navigate("ProfilePage")}/>
           </View>
 
         </View>
