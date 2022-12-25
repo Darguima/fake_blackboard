@@ -1,8 +1,13 @@
 import React from 'react';
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useNavigation } from '@react-navigation/native'
+import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import CoursesPage from "./CoursesPage"
+
+export type CoursesStackParamList = {
+	CoursesPage: undefined,
+}
 
 const CoursesStack:React.FC = () => {
   const Stack = createNativeStackNavigator();
@@ -17,5 +22,7 @@ const CoursesStack:React.FC = () => {
     </Stack.Navigator>
   )
 }
+
+export const useNavigationCoursesStack = () => useNavigation<NativeStackNavigationProp<CoursesStackParamList>>()
 
 export default CoursesStack
