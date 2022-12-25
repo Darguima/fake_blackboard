@@ -13,9 +13,13 @@ Caso não sejas aluno basta transferir esta aplicação, escrever o teu nome e m
 
 Para transferires o `.apk` basta abrires os `Assets` da ultima versão disponível nas nossas [Releases](https://github.com/Darguima/fake_blackboard/releases). 
 
+##### iPhone
+
+Bem, se usas iPhone vais ter um problema, porque para fazer build para IOS é preciso uma conta que custa 100§/ano, ou seja arranja-nos primeiro um patrocínio. 
+
 ### Preview 📺
 
-https://user-images.githubusercontent.com/49988070/209044844-4b4f91e8-8cf3-4f3c-9b6d-c1c289dcb726.mp4
+https://user-images.githubusercontent.com/49988070/209456135-35e69930-160b-42e5-a24d-eee93c6e992e.mp4
 
 ### Notas 📒
 
