@@ -1,26 +1,26 @@
-import React from "react"
-import { View, StyleSheet, Image, Text } from 'react-native';
-import { useNavigationMoreStack } from "../../routes/useNavigation";
+import React from 'react'
+import { View, StyleSheet, Image, Text } from 'react-native'
+import { useNavigationMoreStack } from '../../routes/useNavigation'
 
-import BBButton from "../../components/BBButton";
+import BBButton from '../../components/BBButton'
 
-import useUserInfo from "../../contexts/userInfo";
+import useUserInfo from '../../contexts/userInfo'
 
 const imageSize = 132
 
-const MorePage:React.FC = () => {
-  const {name, studentNumber, schoolDomain} = useUserInfo()
+const MorePage: React.FC = () => {
+  const { name, studentNumber, schoolDomain } = useUserInfo()
 
   const { navigate } = useNavigationMoreStack()
 
-  return(
+  return (
     <View style={styles.container}>
 
       <View style={styles.topContainer}>
-        
+
         <View style={styles.pinkView}>
           <View style={styles.crossIconContainer}>
-            <Image source={require("../../assets/icons/cross.jpg")} style={styles.crossIcon} />
+            <Image source={require('../../assets/icons/cross.jpg')} style={styles.crossIcon} />
           </View>
         </View>
 
@@ -32,13 +32,13 @@ const MorePage:React.FC = () => {
           <View style={styles.userInfoContainer}>
             <Text style={styles.nameText}>{name}</Text>
             <Text style={styles.emailText}>{studentNumber}@{schoolDomain}</Text>
-            <BBButton text="View Profile" darkMode={true} onPress={() => navigate("ProfilePage")}/>
+            <BBButton text="View Profile" darkMode={true} onPress={() => navigate('ProfilePage')}/>
           </View>
 
         </View>
       </View>
 
-      <Image source={require("../../assets/bottomMenu.jpg")} style={styles.bottomImageMenu} resizeMode={"stretch"}/>
+      <Image source={require('../../assets/bottomMenu.jpg')} style={styles.bottomImageMenu} resizeMode={'stretch'}/>
     </View>
   )
 }
@@ -49,86 +49,86 @@ const styles = StyleSheet.create({
   },
 
   topContainer: {
-    height: "70%",
+    height: '70%'
   },
 
   pinkView: {
-    height: "55%",
+    height: '55%',
 
-    backgroundColor: "#fbf4fc"
+    backgroundColor: '#fbf4fc'
   },
-  
-  crossIconContainer: {
-    justifyContent: "center",
-    alignItems: "center",
 
-    position: "absolute",
+  crossIconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    position: 'absolute',
     top: 20,
     left: 20,
     width: 26,
     height: 26,
 
-    backgroundColor: "#262626",
+    backgroundColor: '#262626'
   },
 
   crossIcon: {
-    height: "100%",
-    width: "100%"
+    height: '100%',
+    width: '100%'
   },
 
   whiteView: {
-    alignItems: "center",
-    justifyContent: "center",
-    
-    height: "45%",
+    alignItems: 'center',
+    justifyContent: 'center',
 
-    backgroundColor: "#fff",
+    height: '45%',
 
-    borderBottomColor: "#dddddd",
-    borderBottomWidth: 3,  
-    
+    backgroundColor: '#fff',
+
+    borderBottomColor: '#dddddd',
+    borderBottomWidth: 3,
+
     paddingTop: imageSize / 2
   },
 
   imageContainer: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
 
     width: imageSize,
     height: imageSize,
-    
-    backgroundColor: "#262626",
 
-    position: "absolute",
+    backgroundColor: '#262626',
+
+    position: 'absolute',
     top: -(imageSize / 2),
 
     borderRadius: (imageSize / 2),
     borderWidth: 8,
-    borderColor: "#fff",
+    borderColor: '#fff',
 
-    overflow: "hidden"
+    overflow: 'hidden'
   },
 
   imageText: {
-    width: "1000%",
+    width: '1000%',
 
-    textAlign: "center",
+    textAlign: 'center',
 
-    color: "#fff",
-    fontSize: 18,
+    color: '#fff',
+    fontSize: 18
   },
 
   userInfoContainer: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
 
-    width: "100%",
+    width: '100%'
   },
 
   nameText: {
     paddingBottom: 12,
 
-    color: "#757575",
+    color: '#757575',
     fontSize: 18
   },
 
@@ -136,12 +136,12 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
 
     fontSize: 12,
-    color: "#757575",
+    color: '#757575'
   },
 
   bottomImageMenu: {
     flex: 1,
-    width: "100%",
+    width: '100%'
   }
 })
 

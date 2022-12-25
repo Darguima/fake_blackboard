@@ -1,50 +1,50 @@
-import React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import React from 'react'
+import { StyleSheet, Image } from 'react-native'
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import LandingStack from '../pages/LandingStack';
-import CoursesStack from '../pages/CoursesStack';
-import CalendarStack from '../pages/CalendarStack';
-import MoreStack from '../pages/MoreStack';
+import LandingStack from '../pages/LandingStack'
+import CoursesStack from '../pages/CoursesStack'
+import CalendarStack from '../pages/CalendarStack'
+import MoreStack from '../pages/MoreStack'
 
 const tabIcons = {
   landing: {
-    active: require("../assets/icons/landingActive.jpg"),
-    inactive: require("../assets/icons/landingInactive.jpg")
+    active: require('../assets/icons/landingActive.jpg'),
+    inactive: require('../assets/icons/landingInactive.jpg')
   },
 
   courses: {
-    active: require("../assets/icons/coursesActive.jpg"),
-    inactive: require("../assets/icons/coursesInactive.jpg")
+    active: require('../assets/icons/coursesActive.jpg'),
+    inactive: require('../assets/icons/coursesInactive.jpg')
   },
 
   calendar: {
-    active: require("../assets/icons/calendarActive.jpg"),
-    inactive: require("../assets/icons/calendarInactive.jpg")
+    active: require('../assets/icons/calendarActive.jpg'),
+    inactive: require('../assets/icons/calendarInactive.jpg')
   },
 
   more: {
-    active: require("../assets/icons/moreActive.jpg"),
-    inactive: require("../assets/icons/moreInactive.jpg")
-  },
+    active: require('../assets/icons/moreActive.jpg'),
+    inactive: require('../assets/icons/moreInactive.jpg')
+  }
 }
 
-const imagePicker = (name: "landing" | "courses" | "calendar" | "more", focused: boolean) => {
-  const status = focused ? "active" : "inactive"
+const imagePicker = (name: 'landing' | 'courses' | 'calendar' | 'more', focused: boolean) => {
+  const status = focused ? 'active' : 'inactive'
   return <Image style={styles.tab} source={tabIcons[name][status]} />
 }
 
-const AppTabNavigator:React.FC = () => {
-  const Tab = createBottomTabNavigator();
+const AppTabNavigator: React.FC = () => {
+  const Tab = createBottomTabNavigator()
 
   return (
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
-          tabBarStyle: styles.bottomTabContainer,
+          tabBarStyle: styles.bottomTabContainer
         }}
       >
 
@@ -52,9 +52,9 @@ const AppTabNavigator:React.FC = () => {
           name="LandingTab"
           component={LandingStack}
           options={{
-            title: "Fluxo",
-            tabBarLabel: "",
-            tabBarIcon: ({ focused }) => imagePicker("landing", focused),
+            title: 'Fluxo',
+            tabBarLabel: '',
+            tabBarIcon: ({ focused }) => imagePicker('landing', focused)
           }}
         />
 
@@ -62,9 +62,9 @@ const AppTabNavigator:React.FC = () => {
           name="CoursesTab"
           component={CoursesStack}
           options={{
-            title: "Cursos",
-            tabBarLabel: "",
-            tabBarIcon: ({ focused }) => imagePicker("courses", focused),
+            title: 'Cursos',
+            tabBarLabel: '',
+            tabBarIcon: ({ focused }) => imagePicker('courses', focused)
           }}
         />
 
@@ -72,9 +72,9 @@ const AppTabNavigator:React.FC = () => {
           name="CalendarTab"
           component={CalendarStack}
           options={{
-            title: "Calendário",
-            tabBarLabel: "",
-            tabBarIcon: ({ focused }) => imagePicker("calendar", focused),
+            title: 'Calendário',
+            tabBarLabel: '',
+            tabBarIcon: ({ focused }) => imagePicker('calendar', focused)
           }}
         />
 
@@ -82,34 +82,33 @@ const AppTabNavigator:React.FC = () => {
           name="MoreTab"
           component={MoreStack}
           options={{
-            title: "Mais",
-            tabBarLabel: "",
-            tabBarIcon: ({ focused }) => imagePicker("more", focused),
+            title: 'Mais',
+            tabBarLabel: '',
+            tabBarIcon: ({ focused }) => imagePicker('more', focused)
           }}
         />
 
       </Tab.Navigator>
     </NavigationContainer>
-    
+
   )
 }
 
 const styles = StyleSheet.create({
   bottomTabContainer: {
     height: 78,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
 
     borderTopWidth: 1,
-    borderTopColor: "#cdcdcd",
+    borderTopColor: '#cdcdcd'
   },
 
   tab: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     height: 77,
-    width: "100%"
+    width: '100%'
   }
-});
-
+})
 
 export default AppTabNavigator

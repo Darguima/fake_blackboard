@@ -1,14 +1,14 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import React from 'react'
+import { View, StyleSheet } from 'react-native'
 
-import Constants from 'expo-constants';
-import { StatusBar } from 'expo-status-bar';
+import Constants from 'expo-constants'
+import { StatusBar } from 'expo-status-bar'
 
-import Routes from './src/routes';
+import Routes from './src/routes'
 
-import { UserInfoProvider } from './src/contexts/userInfo';
+import { UserInfoProvider } from './src/contexts/userInfo'
 
-export default function App() {
+export default function App () {
   return (
     <View style={styles.container}>
       <UserInfoProvider>
@@ -25,5 +25,5 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#fff'
-  },
-});
+  }
+})

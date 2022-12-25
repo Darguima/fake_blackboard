@@ -1,20 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-import LoginPage from "../pages/LoginPage"
-import AppTabNavigator from './AppTabNavigator';
+import LoginPage from '../pages/LoginPage'
+import AppTabNavigator from './AppTabNavigator'
 
-import useUserInfo from '../contexts/userInfo';
+import useUserInfo from '../contexts/userInfo'
 
-const Routes:React.FC = () => {
-  const {name, studentNumber, schoolDomain} = useUserInfo()
+const Routes: React.FC = () => {
+  const { name, studentNumber, schoolDomain } = useUserInfo()
 
   return (
       <>
         {
-          name == "" || studentNumber == "" || schoolDomain == "" ?
-          <LoginPage/>
-          :
-          <AppTabNavigator/>
+          name === '' || studentNumber === '' || schoolDomain === ''
+            ? <LoginPage/>
+            : <AppTabNavigator/>
         }
       </>
   )

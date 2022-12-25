@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import CalendarPage from "./CalendarPage"
+import CalendarPage from './CalendarPage'
 
-export type CalendarStackParamList = {
-	CalendarPage: undefined,
+export interface CalendarStackParamList {
+  CalendarPage: undefined
 }
 
-const CalendarStack:React.FC = () => {
-  const Stack = createNativeStackNavigator();
+const CalendarStack: React.FC = () => {
+  const Stack = createNativeStackNavigator()
 
   return (
     <Stack.Navigator
@@ -21,6 +21,5 @@ const CalendarStack:React.FC = () => {
     </Stack.Navigator>
   )
 }
-
 
 export default CalendarStack

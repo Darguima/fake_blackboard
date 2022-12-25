@@ -1,19 +1,19 @@
-import React from "react"
-import { View, StyleSheet, TouchableOpacity, Text, TouchableOpacityProps } from 'react-native';
+import React from 'react'
+import { View, StyleSheet, TouchableOpacity, Text, TouchableOpacityProps } from 'react-native'
 
 interface BBButtonProps extends TouchableOpacityProps {
   text: string
   darkMode?: boolean
 }
 
-const BBButton:React.FC<BBButtonProps> = ({text, darkMode = false, ...touchableOpacityProps}) => {
-  return(
+const BBButton: React.FC<BBButtonProps> = ({ text, darkMode = false, ...touchableOpacityProps }) => {
+  return (
     <View style={styles.container}>
       <TouchableOpacity
         style={[styles.button, darkMode ? styles.buttonDark : {}]}
         {...touchableOpacityProps}
       >
-        <Text style={[styles.buttonText, darkMode ? styles.buttonTextDark : {}]}>{text}</Text>        
+        <Text style={[styles.buttonText, darkMode ? styles.buttonTextDark : {}]}>{text}</Text>
       </TouchableOpacity>
     </View>
   )
@@ -21,20 +21,20 @@ const BBButton:React.FC<BBButtonProps> = ({text, darkMode = false, ...touchableO
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
 
-    width: "100%",
+    width: '100%'
   },
 
   button: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
 
     paddingHorizontal: 4,
 
-    backgroundColor: "#fff",
-    borderColor: "#000",
+    backgroundColor: '#fff',
+    borderColor: '#000',
     borderWidth: 1,
     borderRadius: 4,
 
@@ -43,17 +43,17 @@ const styles = StyleSheet.create({
   },
 
   buttonDark: {
-    backgroundColor: "#262626",
-    borderColor: "#fff",
+    backgroundColor: '#262626',
+    borderColor: '#fff'
   },
 
   buttonText: {
-    color: "#000",
+    color: '#000',
     fontSize: 12
   },
 
   buttonTextDark: {
-    color: "#fff"
+    color: '#fff'
   }
 })
 

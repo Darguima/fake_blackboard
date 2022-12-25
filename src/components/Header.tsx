@@ -1,12 +1,12 @@
-import React from "react"
-import { View, StyleSheet, Text } from 'react-native';
+import React from 'react'
+import { View, StyleSheet, Text } from 'react-native'
 
 interface HeaderProps {
-  title: string,
+  title: string
 }
 
-const Header:React.FC<HeaderProps> = ({title}) => {
-  return(
+const Header: React.FC<HeaderProps> = ({ title }) => {
+  return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
     </View>
@@ -15,17 +15,17 @@ const Header:React.FC<HeaderProps> = ({title}) => {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
 
-    width: "100%",
+    width: '100%',
     height: 52,
-    
-    backgroundColor: "#262626",
+
+    backgroundColor: '#262626'
   },
 
   title: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 18
   }
 })

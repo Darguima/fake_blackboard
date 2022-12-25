@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import CoursesPage from "./CoursesPage"
+import CoursesPage from './CoursesPage'
 
-export type CoursesStackParamList = {
-	CoursesPage: undefined,
+export interface CoursesStackParamList {
+  CoursesPage: undefined
 }
 
-const CoursesStack:React.FC = () => {
-  const Stack = createNativeStackNavigator();
+const CoursesStack: React.FC = () => {
+  const Stack = createNativeStackNavigator()
 
   return (
     <Stack.Navigator
