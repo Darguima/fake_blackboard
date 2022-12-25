@@ -1,6 +1,6 @@
 import React from "react"
 import { View, StyleSheet, Image, Text } from 'react-native';
-import { useNavigationMoreStack } from "./index";
+import { useNavigationMoreStack } from "../../routes/useNavigation";
 
 import BBButton from "../../components/BBButton";
 

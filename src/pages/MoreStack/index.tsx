@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { useNavigation } from '@react-navigation/native'
-import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import MorePage from "./MorePage"
 import ProfilePage from "./ProfilePage"
@@ -26,6 +25,5 @@ const MoreStack:React.FC = () => {
   )
 }
 
-export const useNavigationMoreStack = () => useNavigation<NativeStackNavigationProp<MoreStackParamList>>()
 
 export default MoreStack

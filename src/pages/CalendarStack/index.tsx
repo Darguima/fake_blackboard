@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { useNavigation } from '@react-navigation/native'
-import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import CalendarPage from "./CalendarPage"
 
@@ -23,6 +22,5 @@ const CalendarStack:React.FC = () => {
   )
 }
 
-export const useNavigationCalendarStack = () => useNavigation<NativeStackNavigationProp<CalendarStackParamList>>()
 
 export default CalendarStack

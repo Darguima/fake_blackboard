@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { useNavigation } from '@react-navigation/native'
-import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import LandingPage from "./LandingPage"
 
@@ -23,6 +22,5 @@ const LandingStack:React.FC = () => {
   )
 }
 
-export const useNavigationLandingStack = () => useNavigation<NativeStackNavigationProp<LandingStackParamList>>()
 
 export default LandingStack

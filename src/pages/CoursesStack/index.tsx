@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { useNavigation } from '@react-navigation/native'
-import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import CoursesPage from "./CoursesPage"
 
@@ -22,7 +21,5 @@ const CoursesStack:React.FC = () => {
     </Stack.Navigator>
   )
 }
-
-export const useNavigationCoursesStack = () => useNavigation<NativeStackNavigationProp<CoursesStackParamList>>()
 
 export default CoursesStack
