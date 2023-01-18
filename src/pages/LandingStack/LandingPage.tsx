@@ -1,26 +1,20 @@
 import React from 'react'
-import { View, StyleSheet, Image } from 'react-native'
+import { ScrollView, StyleSheet } from 'react-native'
+import FullWidthImage from '../../components/FullWidthPicture'
 
 const LandingPage: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <Image
+    <ScrollView style={styles.container}>
+      <FullWidthImage
         source={require('./landingPagePayload.jpg')}
-        style={styles.payloadImage}
-        resizeMode="stretch"
       />
-    </View>
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1
-  },
-
-  payloadImage: {
-    width: '100%',
-    height: '100%'
   }
 })
 
