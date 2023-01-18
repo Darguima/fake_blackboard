@@ -1,19 +1,26 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
+import { View, StyleSheet, Image } from 'react-native'
 
 const LandingPage: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text>LandingPage</Text>
+      <Image
+        source={require('./landingPagePayload.jpg')}
+        style={styles.payloadImage}
+        resizeMode="stretch"
+      />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    flex: 1
+  },
+
+  payloadImage: {
+    width: '100%',
+    height: '100%'
   }
 })
 
