@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg9156"
+   width="15.36"
+   height="15.36"
+   viewBox="0 0 15.36 15.36"
+   sodipodi:docname="coursesIcon.svg"
+   inkscape:export-filename="coursesIcon.svg"
+   inkscape:export-xdpi="112.47228"
+   inkscape:export-ydpi="112.47228"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style
+     id="style789">
+#path9295, #rect9171, #path9167 { 
+    fill:currentColor;
+}
+</style>
+  <defs
+     id="defs9160" />
+  <sodipodi:namedview
+     id="namedview9158"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="56.70573"
+     inkscape:cx="7.4419287"
+     inkscape:cy="7.6976347"
+     inkscape:window-width="1916"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9156" />
+  <path
+     style=""
+     d="M 7.68,15.04 H 2.048 L 1.664,14.656 1.28,14.272 V 7.4902365 0.70847283 L 1.786172,0.51423642 2.292344,0.32 H 7.8472864 13.402229 L 13.617232,0.66788234 13.832235,1.0157647 13.476118,1.3718823 13.12,1.728 V 2.4248177 3.1216354 L 13.6,3.52 14.08,3.9183645 V 9.0951824 14.272 l -0.384,0.384 -0.384,0.384 z M 3.36,13.76 h 0.8 V 9.12 4.48 h -0.8 -0.8 v 4.64 4.64 z m 5.76,0 H 12.8 V 9.12 4.48 H 9.12 5.44 v 4.64 4.64 z M 9.1448176,9.28 H 7.808 L 7.424,8.896 7.04,8.512 V 7.9420966 7.3721933 L 7.7957206,7.1825194 8.5514416,6.9928458 9.603449,7.0964227 10.655457,7.2 10.989172,7.7331766 11.322887,8.2663536 10.902261,8.7731766 10.481636,9.28 Z M 7.2,3.2 h 4.64 V 2.4 1.6 H 7.2 2.56 v 0.8 0.8 z"
+     id="path9167" />
+  <rect
+     style=""
+     id="rect9171"
+     width="1.3418369"
+     height="0.6378119"
+     x="1.2768462"
+     y="0.32041836" />
+  <ellipse
+     style=""
+     id="path9295"
+     cx="9.1385574"
+     cy="8.1917143"
+     rx="2.5935144"
+     ry="1.4449651" />
+</svg>
