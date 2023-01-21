@@ -9,10 +9,10 @@ import CoursesStack from '../pages/CoursesStack'
 import CalendarStack from '../pages/CalendarStack'
 import MoreStack from '../pages/MoreStack'
 
-import LandingIcon from '../assets/icons/bottomMenu/landingIcon.svg'
-import CoursesIcon from '../assets/icons/bottomMenu/coursesIcon.svg'
-import CalendarIcon from '../assets/icons/bottomMenu/calendarIcon.svg'
-import MoreIcon from '../assets/icons/bottomMenu/moreIcon.svg'
+import LandingIcon from '../assets/icons/BottomMenu/landingIcon.svg'
+import CoursesIcon from '../assets/icons/BottomMenu/coursesIcon.svg'
+import CalendarIcon from '../assets/icons/BottomMenu/calendarIcon.svg'
+import MoreIcon from '../assets/icons/BottomMenu/moreIcon.svg'
 
 const AppTabNavigator: React.FC = () => {
   const Tab = createBottomTabNavigator()

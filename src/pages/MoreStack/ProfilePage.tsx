@@ -5,6 +5,11 @@ import Header from '../../components/Header'
 
 import useUserInfo from '../../contexts/userInfo'
 
+import AvatarIcon from '../../assets/icons/MoreStack/avatarIcon.svg'
+import PersonIcon from '../../assets/icons/MoreStack/personIcon.svg'
+import CardIdIcon from '../../assets/icons/MoreStack/cardIdIcon.svg'
+import MessagesThinIcon from '../../assets/icons/MoreStack/messagesThinIcon.svg'
+
 const ProfilePage: React.FC = () => {
   const { name, studentNumber, schoolDomain } = useUserInfo()
 
@@ -13,7 +18,8 @@ const ProfilePage: React.FC = () => {
             <Header title="Perfil"/>
 
             <View style={styles.blackView}>
-                <Image source={require('../../assets/icons/person.png')} style={styles.personImage} resizeMode={'stretch'} />
+                <AvatarIcon color={'#666'} width={55} height={55}/>
+
                 <View style={styles.topText}>
                     <Text style={styles.topNameText}>{name} .</Text>
                     <Text style={styles.topUniName}>Universidade do Minho</Text>
@@ -29,17 +35,17 @@ const ProfilePage: React.FC = () => {
                 <View>
 
                     <View style={styles.userInfoContainerFlex}>
-                        <Image source={require('../../assets/icons/person.png')} style={styles.icon} resizeMode={'contain'} />
+                        <PersonIcon color={'#000'} width={24} height={24} style={styles.icon}/>
                         <Text style={styles.userInfoText}>{name} .</Text>
                     </View>
 
                     <View style={styles.userInfoContainerFlex}>
-                        <Image source={require('../../assets/icons/envelope.png')} style={styles.icon} resizeMode={'contain'} />
+                        <MessagesThinIcon color={'#000'} width={24} height={24} style={styles.icon}/>
                         <Text style={styles.userInfoText}>{studentNumber}@{schoolDomain}</Text>
                     </View>
 
                     <View style={styles.userInfoContainerFlex}>
-                        <Image source={require('../../assets/icons/identifica.png')} style={styles.icon} resizeMode={'contain'} />
+                        <CardIdIcon color={'#000'} width={24} height={24} style={styles.icon}/>
                         <Text style={styles.userInfoText}>ID: {studentNumber}</Text>
                     </View>
 
@@ -62,11 +68,6 @@ const styles = StyleSheet.create({
 
     justifyContent: 'center',
     alignItems: 'center'
-  },
-
-  personImage: {
-    width: 75,
-    height: 75
   },
 
   topText: {
@@ -117,9 +118,6 @@ const styles = StyleSheet.create({
   },
 
   icon: {
-    height: 36,
-    width: 36,
-
     marginHorizontal: 8
   },
 

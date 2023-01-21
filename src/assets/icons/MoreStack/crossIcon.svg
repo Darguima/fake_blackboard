@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg66"
+   width="16.500244"
+   height="16.500244"
+   viewBox="0 0 16.500244 16.500244"
+   sodipodi:docname="cross.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style
+     id="style320">
+#rect237-3, #rect237 { 
+    fill:currentColor;
+}
+</style>
+  <defs
+     id="defs70" />
+  <sodipodi:namedview
+     id="namedview68"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <rect
+     id="rect237"
+     width="21.79673"
+     height="2.1541817"
+     x="0.76907003"
+     y="-1.0770329"
+     rx="0.52708083"
+     ry="0.52708083"
+     transform="matrix(0.70711028,0.70710329,-0.70711028,0.70710329,0,0)" />
+  <rect
+     id="rect237-3"
+     width="21.79673"
+     height="2.1541817"
+     x="-10.898308"
+     y="10.590343"
+     rx="0.52708083"
+     ry="0.52708083"
+     transform="matrix(0.70710329,-0.70711028,0.70710329,0.70711028,0,0)" />
+</svg>

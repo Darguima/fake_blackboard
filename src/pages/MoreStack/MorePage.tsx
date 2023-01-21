@@ -1,17 +1,25 @@
 import React from 'react'
-import { View, StyleSheet, Image, Text } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, Text } from 'react-native'
 import { useNavigationMoreStack } from '../../routes/useNavigation'
 
 import BBButton from '../../components/BBButton'
 
 import useUserInfo from '../../contexts/userInfo'
 
+import CrossIcon from '../../assets/icons/MoreStack/crossIcon.svg'
+import CommentsIcon from '../../assets/icons/MoreStack/commentsIcon.svg'
+import LogoutIcon from '../../assets/icons/MoreStack/logoutIcon.svg'
+import MessagesIcon from '../../assets/icons/MoreStack/messagesIcon.svg'
+import NotesIcon from '../../assets/icons/MoreStack/notesIcon.svg'
+import OrganizationIcon from '../../assets/icons/MoreStack/organizationIcon.svg'
+import SettingsIcon from '../../assets/icons/MoreStack/settingsIcon.svg'
+
 const imageSize = 132
 
 const MorePage: React.FC = () => {
   const { name, studentNumber, schoolDomain } = useUserInfo()
 
-  const { navigate } = useNavigationMoreStack()
+  const { navigate, goBack } = useNavigationMoreStack()
 
   return (
     <View style={styles.container}>
@@ -19,9 +27,13 @@ const MorePage: React.FC = () => {
       <View style={styles.topContainer}>
 
         <View style={styles.pinkView}>
-          <View style={styles.crossIconContainer}>
-            <Image source={require('../../assets/icons/cross.jpg')} style={styles.crossIcon} />
-          </View>
+          <TouchableOpacity
+            style={styles.crossIconContainer}
+            onPress={goBack}
+            activeOpacity={1}
+          >
+            <CrossIcon color={'#fff'} width={18} height={18} />
+          </TouchableOpacity>
         </View>
 
         <View style={styles.whiteView}>
@@ -38,7 +50,50 @@ const MorePage: React.FC = () => {
         </View>
       </View>
 
-      <Image source={require('../../assets/bottomMenu.jpg')} style={styles.bottomImageMenu} resizeMode={'stretch'}/>
+      <View style={styles.bottomMenu}>
+
+        <View style={styles.bottomMenuRow}>
+
+          <View style={styles.menuOptionContainer}>
+            <OrganizationIcon color={'#666'} height={24} width={24}/>
+            <Text style={styles.menuOptionText}>Organização</Text>
+          </View>
+
+          <View style={styles.menuOptionContainer}>
+            <MessagesIcon color={'#666'} height={24} width={24}/>
+            <Text style={styles.menuOptionText}>Mensagens</Text>
+          </View>
+
+          <View style={styles.menuOptionContainer}>
+            <NotesIcon color={'#666'} height={24} width={24}/>
+            <Text style={styles.menuOptionText}>Notas</Text>
+          </View>
+
+          <View style={styles.menuOptionContainer}>
+            <SettingsIcon color={'#666'} height={24} width={24}/>
+            <Text style={styles.menuOptionText}>Definição</Text>
+          </View>
+
+        </View>
+
+        <View style={styles.bottomMenuRow}>
+
+          <View style={styles.menuOptionContainer}>
+            <CommentsIcon color={'#666'} height={24} width={24}/>
+            <Text style={styles.menuOptionText}>Comentários</Text>
+          </View>
+
+          <View style={styles.menuOptionContainer}>
+            <LogoutIcon color={'#666'} height={24} width={24}/>
+            <View>
+              <Text style={styles.menuOptionText}>Terminar</Text>
+              <Text style={[styles.menuOptionText, { marginTop: 0 }]}>Sessão</Text>
+            </View>
+          </View>
+
+        </View>
+
+      </View>
     </View>
   )
 }
@@ -139,9 +194,33 @@ const styles = StyleSheet.create({
     color: '#757575'
   },
 
-  bottomImageMenu: {
+  bottomMenu: {
     flex: 1,
     width: '100%'
+  },
+
+  bottomMenuRow: {
+    flexDirection: 'row',
+    height: '50%',
+    width: '100%',
+
+    backgroundColor: '#fff'
+
+  },
+
+  menuOptionContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    width: '25%',
+    height: '100%'
+  },
+
+  menuOptionText: {
+    marginTop: 8,
+
+    color: '#666',
+    fontSize: 10
   }
 })
 

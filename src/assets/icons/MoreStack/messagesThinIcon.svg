@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg25"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><style
+     id="style655">
+#rect367-3, #rect367-6-7, #rect367-6, #rect367, #rect254 { 
+    fill:currentColor;
+}
+</style><sodipodi:namedview
+     id="namedview27"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false" /><defs
+     id="defs22" /><path
+     id="rect254"
+     d="M 3.9941406,6 C 1.7808527,6 0,7.7808527 0,9.9941406 V 38.005859 C 0,40.219147 1.7808527,42 3.9941406,42 H 44.005859 C 46.219147,42 48,40.219147 48,38.005859 V 9.9941406 C 48,7.7808527 46.219147,6 44.005859,6 Z M 4.2558594,7.9355469 H 43.753906 c 1.259688,0 2.273438,1.01375 2.273438,2.2734371 v 27.492188 c 0,1.259687 -1.01375,2.273437 -2.273438,2.273437 H 4.2558594 c -1.2596875,0 -2.2734375,-1.01375 -2.2734375,-2.273437 V 10.208984 c 0,-1.2596871 1.01375,-2.2734371 2.2734375,-2.2734371 z" /><rect
+     id="rect367"
+     width="31.106722"
+     height="1.9677941"
+     x="-3.9628797"
+     y="36.528282"
+     ry="0"
+     transform="rotate(-45)" /><rect
+     id="rect367-6"
+     width="23.748585"
+     height="1.5023224"
+     x="-25.729328"
+     y="30.67071"
+     ry="0"
+     transform="rotate(-41.454304)" /><rect
+     id="rect367-6-7"
+     width="23.748585"
+     height="1.5023224"
+     x="-61.23933"
+     y="-0.89818513"
+     ry="0"
+     transform="rotate(-138.94915)" /><rect
+     id="rect367-3"
+     width="31.643333"
+     height="2.0017397"
+     x="-38.496071"
+     y="-4.5337267"
+     ry="0"
+     transform="rotate(-135)" /></svg>
