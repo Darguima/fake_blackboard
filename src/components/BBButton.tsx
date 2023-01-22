@@ -1,14 +1,16 @@
 import React from 'react'
-import { View, StyleSheet, TouchableOpacity, Text, TouchableOpacityProps } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, Text, TouchableOpacityProps, ViewStyle } from 'react-native'
 
 interface BBButtonProps extends TouchableOpacityProps {
   text: string
   darkMode?: boolean
+
+  containerStyle?: ViewStyle
 }
 
-const BBButton: React.FC<BBButtonProps> = ({ text, darkMode = false, ...touchableOpacityProps }) => {
+const BBButton: React.FC<BBButtonProps> = ({ text, darkMode = false, containerStyle = {}, ...touchableOpacityProps }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       <TouchableOpacity
         style={[styles.button, darkMode ? styles.buttonDark : {}]}
         {...touchableOpacityProps}

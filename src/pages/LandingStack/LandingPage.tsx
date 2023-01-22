@@ -1,14 +1,22 @@
 import React from 'react'
-import { ScrollView, StyleSheet } from 'react-native'
-import FullWidthImage from '../../components/FullWidthPicture'
+import { FlatList, View, StyleSheet } from 'react-native'
+
+import Header from '../../components/Header'
+import WarningComponent from './components/WarningComponent'
+
+import getWarnings from './warning'
 
 const LandingPage: React.FC = () => {
+  const warnings = getWarnings()
   return (
-    <ScrollView style={styles.container}>
-      <FullWidthImage
-        source={require('./landingPagePayload.jpg')}
+    <View style={styles.container}>
+      <Header title='Fluxo de atividades'/>
+
+      <FlatList
+        data={warnings}
+        renderItem={WarningComponent}
       />
-    </ScrollView>
+    </View>
   )
 }
 
